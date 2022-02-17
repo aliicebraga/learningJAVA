@@ -1,0 +1,7 @@
+package Lanches;
+
+public interface BoloInterface {
+	public void escolherMassa();
+	public void escolherRecheio();
+	public void escolherCobertura();
+}

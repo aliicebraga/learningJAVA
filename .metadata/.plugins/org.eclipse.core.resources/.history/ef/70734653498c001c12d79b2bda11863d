@@ -1,0 +1,11 @@
+package Lanches;
+
+public class Salgado extends Lanche implements SalgadoInterface{
+	public Salgado() {}
+	@Override
+	public void escolherTipoMassaSalgado() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

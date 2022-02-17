@@ -1,0 +1,24 @@
+package Lanches;
+
+public class Macarrao extends Massa implements MacarraoInterface{
+
+	
+	public Macarrao() {
+		
+	}
+
+
+	@Override
+	public void escolherTipoMassa() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+	
+
+	
+	
+
+}

@@ -1,0 +1,40 @@
+package Lanches;
+
+public class Pizza extends Massa implements PizzaInterface{
+	
+	final double PIZZA_P = 24.90;
+	final double PIZZA_M = 39.90;
+	final double PIZZA_G = 54.90;
+	
+	public Pizza() {
+			
+	}
+
+	@Override
+	public void escolherSabor() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void escolherTamanho() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void fecharPedido() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+
+	
+
+
+	
+
+}

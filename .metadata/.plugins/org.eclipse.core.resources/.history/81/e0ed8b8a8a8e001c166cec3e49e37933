@@ -1,0 +1,6 @@
+package Lanches;
+
+public interface LasanhaInterface {
+
+	public void escolherProteina();
+}

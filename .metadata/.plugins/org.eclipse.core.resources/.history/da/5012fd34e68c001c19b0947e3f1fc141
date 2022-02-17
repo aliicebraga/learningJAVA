@@ -1,0 +1,68 @@
+package Lanches;
+
+import java.util.Scanner;
+
+public class SalgadoFrito extends Salgado {
+	
+	private String frito;
+	
+	public SalgadoFrito() {
+		System.out.println("Você escolheu salgado assado.");
+		this.fazerFrito();
+	}
+	
+	
+	public void fazerFrito() {
+		this.escolherFrito();
+		super.escolherTipoMassaSalgado();
+		System.out.println("Você escolheu um " + getAssado() + " com " + super.getTipoMassaSalgado());
+   	 	System.out.println("----------------------------------------------------------------------------------------------------------- ");
+		super.setPreco(7.90);
+   	 	super.fecharPedido();
+	}
+	
+	public void escolherFrito() {
+		int escolhaFrito;
+		Scanner ler = new Scanner(System.in);
+
+		System.out.println("--------------- Escolha o salgado frito ---------------");
+		System.out.println(" ");
+		System.out.println("			[ 1 ] - Bolinha de queijo");
+		System.out.println("			[ 2 ] - Coxinha");
+		System.out.println("			[ 3 ] - Enroladinho de Vina");
+		System.out.println("			[ 4 ] - Kibe");
+		System.out.println("Escolha a opção desejada:");
+		System.out.println("  ");
+		
+		escolhaFrito = ler.nextInt();
+
+		switch (escolhaFrito) {
+		case 1:
+			this.setFrito("Doguinho");
+			break;
+		case 2:
+			this.setFrito("Esfirra");
+			break;
+		case 3:
+			this.setFrito("Empada");
+			break;
+		case 4:
+			this.setFrito("Pastel Assado");
+			break;
+
+		default:
+			System.out.println("Número inválido");
+		}
+		
+	}
+	
+
+	public String getFrito() {
+		return frito;
+	}
+
+
+	public void setFrito(String frito) {
+		this.frito = frito;
+	}
+}

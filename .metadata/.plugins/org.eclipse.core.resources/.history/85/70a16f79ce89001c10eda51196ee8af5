@@ -1,0 +1,15 @@
+
+public class Veiculo {
+
+	private String marca;
+	private String modelo;
+	private int qtdePneus;
+	private double velocidade;
+	private double potencia;
+	private double valor;
+	
+	public Veiculo(String marca, String modelo, double valor) {
+		
+	}
+	
+}

@@ -1,0 +1,9 @@
+
+public class Motocicleta extends Motorizado{
+
+	public Motocicleta(String marca, String modelo, double valor) {
+		super(marca, modelo, valor);
+		
+	}
+
+}

@@ -1,0 +1,96 @@
+package Lanches;
+
+import java.util.Scanner;
+
+public class Bolo extends Lanche implements BoloInterface{
+	
+
+	private String massa;
+	private String recheio;
+	private String cobertura;
+	Scanner ler3 = new Scanner(System.in);
+	final double VALOR_BOLO = 40.90;
+	
+	public Bolo() {
+		System.out.println("Você escolheu bolo!");
+	}
+	
+	@Override
+	public void escolherMassa() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void escolherRecheio() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void escolherCobertura() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public String getMassa() {
+		return massa;
+	}
+
+	public void setMassa(String massa) {
+		this.massa = massa;
+	}
+
+	public String getRecheio() {
+		return recheio;
+	}
+
+	public void setRecheio(String recheio) {
+		this.recheio = recheio;
+	}
+
+	public String getCobertura() {
+		return cobertura;
+	}
+
+	public void setCobertura(String cobertura) {
+		this.cobertura = cobertura;
+	}
+
+
+	
+	public static void escolherBolo() {
+	
+		
+		 System.out.println("-----------------------------------Qual o tipo de massa voc� quer?-----------------------------------------");
+    	 tipoMassa = ler3.next();
+    	 
+    	 System.out.println("-----------------------------------Qual o tipo de recheio voc� quer?---------------------------------------");
+    	 recheio = ler3.next();
+    	 
+    	 System.out.println("-----------------------------------Qual o tipo de cobertura voc� quer?-------------------------------------");
+    	 cobertura = ler3.next();
+    	 
+    	 Bolo bolo1 = new Bolo(40.90);
+    	 bolo1.setMassa(tipoMassa);
+    	 bolo1.setRecheio(recheio);
+    	 bolo1.setCobertura(cobertura);
+    	 
+    	 System.out.println("");
+    	 System.out.println("----------------------------------------------------------------------------------------------------------- ");
+    	 System.out.println("Voc� escolheu um bolo com massa de: " + bolo1.getMassa() + " com recheio de: " + bolo1.getRecheio() + " e cobertura de:" + bolo1.getCobertura());
+    	 System.out.println("----------------------------------------------------------------------------------------------------------- ");
+    	 
+    	 mensagemTempoDeEntrega();
+    	 distancia = ler3.nextInt();
+    	 bolo1.fecharPedido();
+    	 bolo1.calcularTempo(distancia);
+   	}
+
+	
+	
+
+}

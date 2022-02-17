@@ -1,0 +1,56 @@
+package Lanches;
+
+import java.util.Scanner;
+
+public class Macarrao extends Massa implements MacarraoInterface {
+
+	private String tipoMassa;
+
+	public Macarrao() {
+		System.out.println("Você escolheu macarrão!");
+		this.escolherTipoMassa();
+	}
+
+	@Override
+	public void escolherTipoMassa() {
+		int escolhaDoTipoMassa;
+		Scanner ler = new Scanner(System.in);
+		escolhaDoTipoMassa = ler.nextInt();
+
+		System.out.println("--------------- Tipos de macarrão a escolher ---------------");
+		System.out.println(" ");
+		System.out.println("			[ 1 ] - Talaharim ...... R$ 28,40");
+		System.out.println("			[ 2 ] - Pene ........... R$ 36,70");
+		System.out.println("			[ 3 ] - Parafuso ....... R$ 39,00");
+		System.out.println("Escolha a opção desejada:");
+		System.out.println("  ");
+
+		switch (escolhaDoTipoMassa) {
+		case 1:
+			this.setTipoMassa("Talharim");
+			super.setPreco(28.40);
+
+			break;
+		case 2:
+			this.setTipoMassa("Pene");
+			super.setPreco(36.70);
+			break;
+		case 3:
+			this.setTipoMassa("Parafuso");
+			this.setPreco(39.00);
+			break;
+
+		default:
+			System.out.println("Número inválido");
+		}
+	}
+
+	public String getTipoMassa() {
+		return tipoMassa;
+	}
+
+	public void setTipoMassa(String tipoMassa) {
+		this.tipoMassa = tipoMassa;
+	}
+
+}

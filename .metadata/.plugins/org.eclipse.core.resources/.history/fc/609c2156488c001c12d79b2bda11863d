@@ -1,0 +1,65 @@
+package Lanches;
+
+public class Bolo extends Lanche implements BoloInterface{
+	
+
+	private String massa;
+	private String recheio;
+	private String cobertura;
+
+	
+	public Bolo(double preco) {
+
+	}
+	
+	@Override
+	public void escolherMassa() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void escolherRecheio() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void escolherCobertura() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public String getMassa() {
+		return massa;
+	}
+
+	public void setMassa(String massa) {
+		this.massa = massa;
+	}
+
+	public String getRecheio() {
+		return recheio;
+	}
+
+	public void setRecheio(String recheio) {
+		this.recheio = recheio;
+	}
+
+	public String getCobertura() {
+		return cobertura;
+	}
+
+	public void setCobertura(String cobertura) {
+		this.cobertura = cobertura;
+	}
+
+
+
+	
+	
+
+}

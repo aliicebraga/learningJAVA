@@ -1,0 +1,11 @@
+
+public class Motocicleta extends Motorizado{
+
+	private boolean partidaEletrica;
+	
+	public Motocicleta(String marca, String modelo, double valor) {
+		super(marca, modelo, valor);
+		this.setTipoCarteira("A");
+	}
+
+}

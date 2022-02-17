@@ -1,0 +1,27 @@
+
+public class Veiculo {
+
+	private String marca;
+	private String modelo;
+	private int qtdePneus;
+	private double velocidade = 1;
+	private double potencia = 1;
+	private double valor;
+	
+	public Veiculo(String marca, String modelo, double valor) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.valor = valor;
+	}
+	
+	public void frear() {
+		this.velocidade -= this.potencia;
+	}
+	
+	public void acelerar() {
+		this.velocidade +=(this.velocidade * this.potencia);
+	}
+	
+	
+	
+}

@@ -1,0 +1,11 @@
+package Lanches;
+
+public interface LancheInterface {
+
+	public void fecharPedido();
+	public void calcularTempo();
+	public void mensagemTempoDeEntrega();
+	public static void agradecimento();
+
+	
+}

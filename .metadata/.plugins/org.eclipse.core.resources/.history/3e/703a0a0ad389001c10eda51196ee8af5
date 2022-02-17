@@ -1,0 +1,14 @@
+
+public class Bicicleta extends Veiculo{
+
+	private int qtdeMarchas;
+	private boolean bagageiro;
+	
+	public Bicicleta(String marca, String modelo, double valor, int qtdeMarchas) {
+		super(marca, modelo, valor);
+		this.qtdeMarchas = qtdeMarchas;
+		this.setQtdePneus(2);
+		this.setPotencia(13);
+	}
+
+}

@@ -1,0 +1,7 @@
+package Lanches;
+
+public class SalgadoAssado extends Salgado{
+	public SalgadoAssado() {
+System.out.println("Você escolheu salgado assado.");
+	}
+}

@@ -1,0 +1,20 @@
+
+public class Motocicleta extends Motorizado{
+
+	private boolean partidaEletrica;
+	
+	public Motocicleta(String marca, String modelo, double valor) {
+		super(marca, modelo, valor);
+		this.setTipoCarteira("A");
+		this.setPotencia(2.4);
+	}
+	
+	public void dados() {
+		System.out.println("--------------MOTOCICLETA--------------");
+		super.dados();
+		System.out.printf("Quantidade de marchas: %d.%n", this.qtdeMarchas);
+		System.out.printf("Tem bagageiro? %s%n", (this.isBagageiro()? "Sim.": "Não."));
+	
+	}
+
+}

@@ -1,0 +1,12 @@
+package Lanches;
+
+public class Lasanha extends Massa implements LasanhaInterface{
+	
+
+	public Lasanha() {
+		
+	}
+	
+
+
+}

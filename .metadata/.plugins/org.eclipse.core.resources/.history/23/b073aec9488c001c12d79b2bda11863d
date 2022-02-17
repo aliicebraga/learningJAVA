@@ -1,0 +1,220 @@
+package Lanches;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ProgramaMain {
+	////////declarando o Scanner para leitura de dados
+	Scanner ler = new Scanner(System.in);
+	
+	////// MAIN
+	public static void main(String[] args) {
+
+		/////// declarando a variável para armazenar o lanche escolhido
+		int escolhaDoTipoLanche;
+
+		/////////// Informações printadas na tela para escolha do lanche -
+		///////// dependendo da opção escolhida uma classe é instanciada
+		System.out.println("--------------- Bem-vindos do Delivery do Java Express ---------------");
+		System.out.println("");
+		System.out.println("--------------- Menu de opções ---------------");
+		System.out.println("		[ 1 ] - Bolos .......... R$ 40,90");
+		System.out.println("		[ 2 ] - Massas ......... R$ (depende do tipo escolhido)");
+		System.out.println("		[ 3 ] - Pizza .......... R$ (depende do tamanho escolhido)");
+		System.out.println("		[ 4 ] - Salgados ....... R$ (depende do tipo escolhido)");
+		System.out.println("		[ 5 ] - Sanduíches ..... R$ 10,00 + 2,00 por ingrediente escolhido");
+		System.out.println("Escolha a opção desejada:");
+
+		escolhaDoTipoLanche = ler.nextInt();
+
+		switch (escolhaDoTipoLanche) {
+		case 1:
+			Bolo bolo = new Bolo();
+			break;
+		case 2:
+			System.out.println("--------------- Você escolheu Massa. Dentre as massas, você pode escolher entre: ");
+			System.out.println(" ");
+			escolherTipo("massa");
+			break;
+		case 3:
+			Pizza pizza = new Pizza();
+			break;
+		case 4:
+			System.out.println("--------------- Você escolheu Salgado. Dentre os salgados, você pode escolher entre: ");
+			System.out.println(" ");
+			escolherTipo("salgado");
+			break;
+		case 5:
+			Sanduiche sanduba = new Sanduiche();
+			break;
+		default:
+			System.out.println("Número inválido");
+		}
+//		agradecimento();
+
+	}
+
+	public static void escolherTipo(String tipo) {
+		int escolhaDoTipoLanche;
+		if (tipo == "massa") {
+			System.out.println("--------------- Menu de opções ---------------");
+			System.out.println(" ");
+			System.out.println("			[ 1 ] - Macarrão...........R$ (escolher o tipo)");
+			System.out.println("			[ 2 ] - Lasanha ...........R$ 45.90");
+			System.out.println("  ");
+			System.out.println("--------------- Escolha a opção desejada:");
+			System.out.println("  ");
+			escolhaDoTipoLanche = ler.nextInt();
+			switch (escolhaDoTipoLanche) {
+			case 1:
+				Macarrao macarrao1 = new Macarrao();
+				break;
+			case 2:
+				Lasanha lasanha1 = new Lasanha();
+				break;
+			default:
+				System.out.println("Número inválido");
+			}
+
+		} else {
+			System.out.println("--------------- Menu de opções ---------------");
+			System.out.println(" ");
+			System.out.println("			[ 1 ] - Assado. .........R$ 7.90");
+			System.out.println("			[ 2 ] - Frito ...........R$ 5.90");
+			System.out.println("  ");
+			System.out.println("--------------- Escolha a opção desejada:");
+			System.out.println("  ");
+			escolhaDoTipoLanche = ler.nextInt();
+			switch (escolhaDoTipoLanche) {
+			case 1:
+//		       	 SalgadoAssado assado1 = new SalgadoAssado();
+				break;
+			case 2:
+//		    	 SalgadoFrito frito1 = new SalgadoFrito();
+				break;
+			default:
+				System.out.println("Número inválido");
+			}
+		}
+	}
+
+	public static void escolherTipoDeMassa() {
+		int escolhaDoTipoMassa, escolhaTipoPizza;
+		double distancia;
+		Scanner lerDados = new Scanner(System.in);
+
+		Scanner ler2 = new Scanner(System.in);
+
+		escolhaDoTipoMassa = ler2.nextInt();
+
+		switch (escolhaDoTipoMassa) {
+		case 1:
+			Massa massa1 = new Macarrao();
+			massa1.setMolho(massa1.escolherMolho());
+			System.out.println(
+					"__________________________________Tipos de macarrão a escolher______________________________________________");
+			System.out.println(" ");
+			System.out.println("                                  [ 1 ] - Talaharim ...... R$ 28,40");
+			System.out.println("                                  [ 2 ] - Pene ........... R$ 36,70");
+			System.out.println("                                  [ 3 ] - Parafuso ....... R$ 39,00");
+			System.out.println(" Escolha a opção desejada:");
+			System.out.println("  ");
+
+			escolhaTipoPizza = lerDados.nextInt();
+			switch (escolhaTipoPizza) {
+			case 1:
+				massa1.setSabor("Talharim");
+				massa1.setPreco(28.40);
+
+				break;
+			case 2:
+				massa1.setSabor("Pene");
+				massa1.setPreco(36.70);
+				break;
+			case 3:
+				massa1.setSabor("Parafuso");
+				massa1.setPreco(39.00);
+				break;
+
+			default:
+				System.out.println("Número inválido");
+			}
+
+			System.out.println(
+					" ----------------------------------------------------------------------------------------------------------- ");
+			System.out.println("                           Você escolheu macarrão " + massa1.getSabor()
+					+ " e o molho escolhido foi: " + massa1.getMolho());
+			System.out.println(
+					" ----------------------------------------------------------------------------------------------------------- ");
+			mensagemTempoDeEntrega();
+			distancia = lerDados.nextInt();
+			massa1.fecharPedido();
+			massa1.calcularTempo(distancia);
+			break;
+		case 2:
+			Massa massa2 = new Pizza();
+			massa2.setMolho(massa2.escolherMolho());
+
+			System.out.println(
+					"__________________________________Sabores de pizzas disponíveis______________________________________________");
+			System.out.println(" ");
+			System.out.println("                                  [ 1 ] - Calabreza ...... R$ 36,40");
+			System.out.println("                                  [ 2 ] - Atum ........... R$ 40,60");
+			System.out.println("                                  [ 3 ] - 4 queijos ...... R$ 41,00");
+			System.out.println(" Escolha a opção desejada:");
+			System.out.println("  ");
+
+			escolhaTipoPizza = lerDados.nextInt();
+			switch (escolhaTipoPizza) {
+			case 1:
+				massa2.setSabor("Calabreza");
+				massa2.setPreco(36.40);
+
+				break;
+			case 2:
+				massa2.setSabor("Atum");
+				massa2.setPreco(40.60);
+				break;
+			case 3:
+				massa2.setSabor("4 queijos");
+				massa2.setPreco(41.00);
+				break;
+
+			default:
+				System.out.println("Número inválido");
+			}
+
+			System.out.println(
+					" ----------------------------------------------------------------------------------------------------------- ");
+			System.out.println("                            Você escolheu pizza de " + massa2.getSabor()
+					+ " e o molho escolhido foi: " + massa2.getMolho());
+			System.out.println(
+					" ----------------------------------------------------------------------------------------------------------- ");
+			mensagemTempoDeEntrega();
+			distancia = lerDados.nextInt();
+			massa2.fecharPedido();
+			massa2.calcularTempo(distancia);
+			break;
+		case 3:
+			Massa massa3 = new Lasanha();
+			massa3.setPreco(45.90);
+			massa3.setMolho(massa3.escolherMolho());
+			System.out.println(
+					" ----------------------------------------------------------------------------------------------------------- ");
+			System.out.println(
+					"                            Você escolheu lasanha e o molho escolhido foi: " + massa3.getMolho());
+			System.out.println(
+					" ----------------------------------------------------------------------------------------------------------- ");
+			mensagemTempoDeEntrega();
+			distancia = lerDados.nextInt();
+			massa3.fecharPedido();
+			massa3.calcularTempo(distancia);
+			break;
+		default:
+			System.out.println("Número inválido");
+		}
+
+	}
+
+}

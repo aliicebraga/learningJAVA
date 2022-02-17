@@ -1,0 +1,191 @@
+package Lanches;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Pizza extends Lanche implements PizzaInterface{
+	
+	final double PIZZA_P = 24.90;
+	final double PIZZA_M = 39.90;
+	final double PIZZA_G = 54.90;
+	private String tamanho;
+	String[] sabores = {"Milho", "Milho com Bacon", "Milho com Frango", "Milho com Parmesão", "Milho com Brócolis"};
+	List<String> saborEscolhido = new ArrayList<>();
+
+	
+	public Pizza() {
+		System.out.println("Você escolheu pizza!");
+	}
+	
+	public void fazerPizza() {
+		this.escolherTamanho();
+		System.out.println("Você escolheu uma pizza de " + getSaborEscolhido() + " tamanho " + getTamanho());
+   	 	System.out.println("----------------------------------------------------------------------------------------------------------- ");
+		super.fecharPedido();
+	}
+	
+	public void escolherTamanho() {
+		int escolhaTamanho;
+		Scanner ler = new Scanner(System.in);
+
+		System.out.println("--------------- Escolha a proteína ---------------");
+		System.out.println(" ");
+		System.out.printf("			[ 1 ] - Pequena (4 pedaços) ...... R$%.2f%n", PIZZA_P);
+		System.out.printf("			[ 2 ] - Média (8 pedaços) ........ R$%.2f%n", PIZZA_M);
+		System.out.printf("			[ 3 ] - Grande (12 pedaços) ...... R$%.2f%n",PIZZA_G);
+		System.out.println("Escolha a opção desejada:");
+		System.out.println("  ");
+		
+		escolhaTamanho = ler.nextInt();
+
+		switch (escolhaTamanho) {
+		case 1:
+			this.setProteina("Queijo");
+			super.setPreco(27.80);
+
+			break;
+		case 2:
+			this.setProteina("Frango");
+			super.setPreco(22.50);
+			break;
+		case 3:
+			this.setProteina("Carne");
+			this.setPreco(78.90);
+			break;
+
+		default:
+			System.out.println("Número inválido");
+		}
+		
+	}
+	
+	
+
+//	método para escolher o sabor da pizza
+	public void escolherSabor(int quantSabor) {
+		
+		System.out.printf("-------- Escolha até %d sabores de Pizza: %n", quantSabor);
+		
+		//ordenar o array sabores em ordem alfabética para ser printado na tela
+		Arrays.sort(sabores);
+		//for pra percorrer todas as posições do array sabores
+		for (String i : sabores) {
+			int n = 1;
+			//printar o sabores um por um
+			  System.out.printf("Sabor %d: %s.%n",n++,i);
+			}
+		
+		
+		
+		//rotina para o usuário escolher um dos sabores		
+		// declaração do scanner que vai ler o dado do teclado
+		Scanner lerDados = new Scanner(System.in);
+		//variável que vai armazenar o sabor escolhido
+		int escolhaDoIngrediente = 10;
+		
+			
+		while ((quantSabor != 0) && escolhaDoIngrediente != 0) {
+					
+			System.out.println("-------- Digite o número do ingrediente ou [0] para encerrar a escolha.");
+				
+			escolhaDoIngrediente = lerDados.nextInt();
+			
+			if(escolhaDoIngrediente < sabores.length + 1) {
+				for (String i : sabores) {
+					int n = 1;
+						if(escolhaDoIngrediente == n) {
+							this.setSaborEscolhido(i);
+							n++;
+							quantSabor--;
+						}else {
+							n++;
+						}
+					}
+			}
+			
+			
+//			switch (escolhaDoIngrediente) {
+//			
+//		     	case 1:
+//		     		lanche1.setIngrediente("queijo");
+//		     		break;
+//		     	case 2:
+//		     		lanche1.setIngrediente("preseunto");
+//		     		break;
+//		     	case 3:
+//		     		lanche1.setIngrediente("bacon");
+//		     		break;
+//		     	case 4:
+//		     		lanche1.setIngrediente("alface");
+//		     		break;
+//		     	case 5:
+//		     		lanche1.setIngrediente("tomate");
+//		     		break;
+//		     	case 6:
+//		     		lanche1.setIngrediente("catupiry");
+//		     		break;	
+//		     	case 7:
+//		     		lanche1.setIngrediente("maionese");
+//		     		break;
+//		     	case 8:
+//		     		lanche1.setIngrediente("abacaxi");
+//		     		break;
+//		     	case 9:
+//		     		lanche1.setIngrediente("batata pallha");
+//		     		break;	
+//		     	case 10:
+//		     		lanche1.setIngrediente("mostarda");
+//		     		break;
+//		     	case 0:
+//		     		break;	
+//		     	default:
+//		       		System.out.println("N�mero inv�lido");
+//		     }
+//			quantSabor--;
+//			quantIngrediente++;
+//			System.out.println(" ----------------------------------------------------------------------------------------------------------- ");
+//			lanche1.getIngrediente();
+//			System.out.println(" ----------------------------------------------------------------------------------------------------------- ");
+//			System.out.println(" ");
+//			
+//			
+	}
+//		lanche1.setPreco(10 + quantIngrediente * 2);
+//		mensagemTempoDeEntrega();
+//		distancia = lerDados.nextInt();
+//		lanche1.fecharPedido();
+//		lanche1.calcularTempo(distancia);
+		
+	}	
+
+
+///////////// getters and setters
+	private List<String> getSaborEscolhido() {
+		return saborEscolhido;
+	}
+
+
+	private void setSaborEscolhido(String sabor) {
+		saborEscolhido.add(sabor);
+	}
+
+	public String getTamanho() {
+		return tamanho;
+	}
+
+	public void setTamanho(String tamanho) {
+		this.tamanho = tamanho;
+	}
+
+
+
+
+
+	
+
+
+	
+
+}

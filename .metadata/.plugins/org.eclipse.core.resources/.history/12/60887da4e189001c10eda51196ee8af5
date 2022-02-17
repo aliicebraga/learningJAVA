@@ -1,0 +1,21 @@
+
+public class Motorizado extends Veiculo{
+
+	private String tipoCarteira;
+	
+	public Motorizado(String marca, String modelo, double valor) {
+		super(marca, modelo, valor);
+		
+	}
+
+	public String getTipoCarteira() {
+		return tipoCarteira;
+	}
+
+	public void setTipoCarteira(String tipoCarteira) {
+		this.tipoCarteira = tipoCarteira;
+	}
+	
+	
+
+}

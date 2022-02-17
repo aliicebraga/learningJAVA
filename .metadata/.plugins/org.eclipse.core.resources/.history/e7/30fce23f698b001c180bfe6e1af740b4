@@ -1,0 +1,32 @@
+package Lanches;
+
+public class Pizza extends Massa implements PizzaInterface{
+	
+	
+
+	public Pizza() {
+			
+	}
+
+	@Override
+	public void escolherSabor() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void escolherTamanho() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+
+	
+
+
+	
+
+}

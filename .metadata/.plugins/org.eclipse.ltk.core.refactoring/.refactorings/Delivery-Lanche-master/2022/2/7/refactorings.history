@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 8 elements to &apos;DeliveryLanchonete-AliceBraga/src/(default package)&apos;&#x0A;- Original project: &apos;Delivery-Lanche-master&apos;&#x0A;- Destination element: &apos;DeliveryLanchonete-AliceBraga/src/(default package)&apos;&#x0A;- Original elements:&#x0A;     Macarrao.java&#x0A;     Pizza.java&#x0A;     Lanche.java&#x0A;     ProgramaMain.java&#x0A;     Sanduiche.java&#x0A;     Massa.java&#x0A;     Bolo.java&#x0A;     Lasanha.java" description="Copy files" destination="=DeliveryLanchonete-AliceBraga/src&lt;" element1="Macarrao.java" element2="Pizza.java" element3="Lanche.java" element4="ProgramaMain.java" element5="Sanduiche.java" element6="Massa.java" element7="Bolo.java" element8="Lasanha.java" files="8" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1644597565859" units="0" version="1.0"/>
+</session>

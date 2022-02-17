@@ -1,0 +1,5 @@
+package Lanches;
+
+public interface MacarraoInterface {
+
+}

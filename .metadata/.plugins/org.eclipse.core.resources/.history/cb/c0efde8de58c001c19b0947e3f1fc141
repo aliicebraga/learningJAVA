@@ -1,0 +1,72 @@
+package Lanches;
+
+import java.util.Scanner;
+
+public class SalgadoAssado extends Salgado {
+	
+	private String assado;
+	
+	public SalgadoAssado() {
+		System.out.println("Você escolheu salgado assado.");
+	}
+	
+	
+	public void fazerAssado() {
+		this.escolherAssado();
+		super.escolherTipoMassaSalgado();
+		System.out.println("Você escolheu um " + getAssado() + " com " + super.getTipoMassaSalgado());
+   	 	System.out.println("----------------------------------------------------------------------------------------------------------- ");
+		super.setPreco(27.80);
+   	 	super.fecharPedido();
+	}
+	
+	public void escolherAssado() {
+		int escolhaAssado;
+		Scanner ler = new Scanner(System.in);
+
+		System.out.println("--------------- Escolha a proteína ---------------");
+		System.out.println(" ");
+		System.out.println("			[ 1 ] - Queijo ...... R$ 27,80");
+		System.out.println("			[ 2 ] - Frango ........... R$ 22,50");
+		System.out.println("			[ 3 ] - Carne ....... R$ 78,90");
+		System.out.println("			[ 3 ] - Carne ....... R$ 78,90");
+		System.out.println("Escolha a opção desejada:");
+		System.out.println("  ");
+		
+		escolhaAssado = ler.nextInt();
+
+		switch (escolhaAssado) {
+		case 1:
+			this.setAssado("Queijo");
+
+
+			break;
+		case 2:
+			this.setAssado("Frango");
+
+			break;
+		case 3:
+			this.setAssado("Carne");
+
+			break;
+		case 4:
+			this.setAssado("Carne");
+
+			break;
+
+		default:
+			System.out.println("Número inválido");
+		}
+		
+	}
+	
+
+	public String getAssado() {
+		return assado;
+	}
+
+
+	public void setAssado(String assado) {
+		this.assado = assado;
+	}
+}

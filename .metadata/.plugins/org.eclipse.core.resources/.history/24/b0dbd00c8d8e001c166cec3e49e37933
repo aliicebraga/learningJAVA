@@ -1,0 +1,68 @@
+package Lanches;
+
+import java.util.Scanner;
+
+public class SalgadoAssado extends Salgado {
+	
+	private String assado;
+	
+	public SalgadoAssado() {
+		System.out.println("Você escolheu salgado assado.");
+		this.fazerAssado();
+	}
+	
+	
+	public void fazerAssado() {
+		this.escolherAssado();
+		super.escolherTipoMassaSalgado();
+		System.out.println("Você escolheu um " + getAssado() + " com " + super.getTipoMassaSalgado());
+   	 	System.out.println("----------------------------------------------------------------------------------------------------------- ");
+		super.setPreco(7.90);
+   	 	super.fecharPedido();
+	}
+	
+	public void escolherAssado() {
+		int escolhaAssado;
+		Scanner ler = new Scanner(System.in);
+
+		System.out.println("--------------- Escolha o salgado assado ---------------");
+		System.out.println(" ");
+		System.out.println("			[ 1 ] - Doguinho");
+		System.out.println("			[ 2 ] - Esfirra");
+		System.out.println("			[ 3 ] - Empada");
+		System.out.println("			[ 4 ] - Pastel Assado");
+		System.out.println("Escolha a opção desejada:");
+		System.out.println("  ");
+		
+		escolhaAssado = ler.nextInt();
+
+		switch (escolhaAssado) {
+		case 1:
+			this.setAssado("Doguinho");
+			break;
+		case 2:
+			this.setAssado("Esfirra");
+			break;
+		case 3:
+			this.setAssado("Empada");
+			break;
+		case 4:
+			this.setAssado("Pastel Assado");
+			break;
+
+		default:
+			System.out.println("Número inválido");
+		}
+		
+	}
+	
+
+	public String getAssado() {
+		return assado;
+	}
+
+
+	public void setAssado(String assado) {
+		this.assado = assado;
+	}
+}

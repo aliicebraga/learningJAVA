@@ -1,0 +1,18 @@
+package Lanches;
+
+public class Lasanha extends Massa implements LasanhaInterface{
+	
+
+	public Lasanha() {
+		System.out.println("Você escolheu lasanha!");
+	}
+
+	@Override
+	public void escolherProteina() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+
+}

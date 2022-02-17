@@ -1,0 +1,6 @@
+package Lanches;
+
+public interface SanduicheInterface {
+
+	public void escolherIngredientes();
+}

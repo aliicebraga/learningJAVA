@@ -1,0 +1,10 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		Bicicleta bike1 = new Bicicleta("Mountain Bike", "Aventura", 1200, 21);
+		bike1.dados();
+
+	}
+
+}
